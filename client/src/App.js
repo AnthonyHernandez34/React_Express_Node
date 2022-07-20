@@ -1,6 +1,11 @@
-import React, { useEffect, useState} from 'react'
+import React, { useRef, useEffect, useState} from 'react'
+//styled components
+import {Styledcontainer} from './components/Style';
 
 function App() {
+  <main className='App'>
+    <Register />
+  </main>
 
   const [backendData, setBackendData] = useState([{}])
 
@@ -16,13 +21,15 @@ function App() {
   return (
 <div>
 {(typeof backendData.users === 'undefined') ?(
-  <p>Loading...</p>
+  <p>Hello World</p>
 ): (
 backendData.users.map((user, i) => (
 <p key={i}>{user}</p>
+
 ))
 )}
 </div>
   );
 }
+
 export default App;
