@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 
 function App() {
 
-  const [backendData, setBackendData] = useState( [{}] )
+  const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
     fetch("/api").then(
@@ -13,7 +13,6 @@ function App() {
       }
     )
   }, [])
-
   return (
 <div>
 {(typeof backendData.users === 'undefined') ?(
@@ -26,5 +25,4 @@ backendData.users.map((user, i) => (
 </div>
   );
 }
-
 export default App;
